@@ -1,0 +1,2 @@
+- spaces 
+	- white space betweens <li> will break the sibling nodes
