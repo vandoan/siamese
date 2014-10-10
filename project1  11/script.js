@@ -1,17 +1,25 @@
-function checkUsername() {
-	// declare function 
-	var elMsg = document.getElementById('feedback'); 
-		if (this.value.length < 5 ) {
-			elMsg.textContent = 'Username must be 5 character or more';
-		}	else 	{ 
-			elMsg.textContent = ''; 
-		}
+var elForm, elSelectPackage, elPackageHint, elTerms; 
+elForm 	= document.getElementById('formSignup'); 
+elSelectPackage = document.getElementById('package'); 
+elPackageHint = document.getElementById('packageHint'); 
+elTerms			= document.getElementById('terms'); 
+elTermsHint		= document.getElementById('termsHint'); 
+
+function packageHint() { 
+	var package = this.options[this.selectedIndex].value; 
+	if (package == 'monthly'){
+		elPackageHint.innerHTML = 'Save $10 if you pay for 1 year!'; 
+	} else { 
+		elPackageHint.innerHTML = 'Wise choice!'; 
+	}
 }
 
-var elUsername = document.getElementById('username');
-	// get username input
-elUsername.onblur = checkUsername; 
-	// when it loses focus call checkuserName()
+function checkTerms(event) {
+	if (!elTerms.checked) {
+		elTermsHint.innerTHML = 'You must agree to the terms.'; 
+		event.preventDefault(); 
+	}
+}
 
-
-
+elForm.addEventListener('submit', checkTerms, false); 
+elSelectPackage.addEventListener('change', packageHint, false); 
