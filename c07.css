@@ -14,7 +14,7 @@ body {
   /* Responsive page rules at bottom of style sheet */
 
 h1 {
-  background-image: url(../images/kinglogo.png);
+  background-image: url(images/kinglogo.png);
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
@@ -70,7 +70,7 @@ li {
 
 li a {
   color: #fff;
-  background-image: url('../images/icon-link.png');
+  background-image: url('/images/icon-link.png');
   background-position: center right;
   background-repeat: no-repeat;
   text-decoration: none;
@@ -106,7 +106,7 @@ p {
 .complete {
   background-color: #999;
   color: #fff;
-  background-image: url("../images/icon-trash.png");
+  background-image: url("images/icon-trash.png");
   background-position: center right;
   background-repeat: no-repeat;
   text-shadow: 2px 2px 1px #ccc;
@@ -117,13 +117,13 @@ p {
 .complete a {display:block;}
 
 .favorite {
-  background-image: url('../images/icon-heart.png');
+  background-image: url('images/icon-heart.png');
   background-position: center right;
   background-repeat: no-repeat;}
 
 em.seasonal
  {
-  background-image: url('../images/icon-calendar.png');
+  background-image: url('images/icon-calendar.png');
   background-position: left  center;
   background-repeat: no-repeat;
   padding-left: 30px;}
@@ -191,14 +191,14 @@ select, option {
 
 #feedback, #termsHint {
   color: #fff;
-  background-image: url('../images/warning.png');
+  background-image: url('images/warning.png');
   background-repeat: no-repeat;
   background-position: 2px 14px;
   padding: 10px 0px 0px 22px;}
 
 #packageHint {
   color: #fff;
-  background-image: url('../images/hint.png');
+  background-image: url('images/hint.png');
   background-repeat: no-repeat;
   background-position: 2px 5px;
   padding-left: 22px;}
@@ -244,7 +244,7 @@ a.show{
   width: 130px;
   height: 60px;
   background-color: #403c3b;
-  background-image: url('../images/adverlion.png');
+  background-image: url('/images/adverlion.png');
   background-repeat: no-repeat;
   background-position: 10px center;
   color: #fff;
@@ -291,7 +291,7 @@ a.show{
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
   h1{
-    background-image: url(../images/2xkinglogo.png);
+    background-image: url(images/2xkinglogo.png);
     background-size: 72px 72px;
   }
 }
