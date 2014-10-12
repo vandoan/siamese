@@ -1,14 +1,22 @@
-var $listItems = $('li'); 
-$listItems.filter('.hot:last').removeClass('hot');
-$('li:not(.hot').addClass('cool'); 
-$listItems.has('em').addClass('complete'); 
+$(function() { 
+	var $newItemButton = $('#newItemButton'); 
+	var $newItemForm = $('#newItemForm'); 
+	var $textInput = $('input:text'); 
 
-$listItems.each(function() {
-	var $this = $(this); 
-	if ($this.is('.hot')) {
-		$this.prepend('Priority item: '); 
-	}
-}); 
+	$newItemButton.show(); 
+	$newItemForm.hide(); 
 
-$('li:contains("honey")').append('(local)'); 
+	$('#showForm').on('click', function(){
+		$newItemButton.hide(); 
+		$newItemForm.show();
+	});
 
+	$newItemForm.on('submit', function(e){
+		e.preventDefault(); 
+		var newText = $('input:text').val(); 
+		$('li:last').after('<li>' + newText + '</li>'); 
+		$newItemForm.hide(); 
+		$newItemButton.show(); 
+		$textInput.val(''); 
+		});
+	});    

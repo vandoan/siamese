@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Filters in Use, 339</title>
+    <title>JavaScript &amp; jQuery - Chapter 7: Introducing jQuery - Form elements, 345</title>
     <link rel="stylesheet" href="../c07.css" />
   </head>
   <body>
@@ -14,7 +14,11 @@
         <li id="three" class="hot">honey</li>
         <li id="four">balsamic vinegar</li>
       </ul>
-      <p id="notes">Click or mouseover a hot item...</p>
+      <div id="newItemButton"><button href="#" id="showForm">new item</button></div>
+      <form id="newItemForm">
+        <input type="text" id="itemDescription" placeholder="Add description..." />
+        <input type="submit" id="addButton" value="add" />
+      </form>
     </div>
     <script src="../jquery-1.11.0.js"></script>
     <script src="script.js"></script>
